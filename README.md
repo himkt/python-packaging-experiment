@@ -1,4 +1,4 @@
-### pyproject.toml vs setup.py
+### Q. pyproject.toml vs setup.py, which is prioritized?
 
 Consider the case where build backend is set to `setuptools.build_meta` in `pyproject.toml`.
 When `[project]` table in `pyproject.toml` and `setup.py` is prepared, what happens?
