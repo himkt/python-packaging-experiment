@@ -5,6 +5,8 @@ When `[project]` table in `pyproject.toml` and `setup.py` is prepared, what happ
 
 ### Anser: `pyproject.toml` won!
 
+> pyproject.toml
+
 ```toml
 [build-system]
 requires = ["setuptools"]
@@ -15,14 +17,18 @@ name = "test-prj"
 dynamic = ["version"]
 ```
 
+> setup.py
+
 ```python
 from setuptools import setup
 
 setup(name="test_prj_setup_py")
 ```
 
+### Result
+
 ```
-> pip install .                                                                                      [2024-07-15 00:22:43]
+> pip install .
 Processing path/to/test-prj
   Installing build dependencies ... done
   Getting requirements to build wheel ... done
@@ -40,5 +46,8 @@ Installing collected packages: test-prj
 Successfully installed test-prj-0.0.0
 ```
 
-note; if `[project]` section is removed, pip installed the package as `test_prj_setup_py` (i.e. `setup.py` is picked up).
-note; if `[build-system]` is not defined in `pyproject.toml` and `setup.py` does not exist, `setuptools` is automatically used and read metadata in `[project]`.
+> [!NOTE]
+> If `[project]` section is removed, pip installed the package as `test_prj_setup_py` (i.e. `setup.py` is picked up).
+
+> [!NOTE]
+> If `[build-system]` is not defined in `pyproject.toml` and `setup.py` does not exist, `setuptools` is automatically used and read metadata in `[project]`.
