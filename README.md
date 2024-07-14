@@ -3,7 +3,7 @@
 Consider the case where build backend is set to `setuptools.build_meta` in `pyproject.toml`.
 When `[project]` table in `pyproject.toml` and `setup.py` is prepared, what happens?
 
-### Anser: `pyproject.toml` won!
+### A. `pyproject.toml` won!
 
 > pyproject.toml
 
